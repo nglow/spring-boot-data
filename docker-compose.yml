@@ -1,6 +1,7 @@
 version: "3.9"
 
 services:
+
   mysql:
     image: mysql:8
     environment:
@@ -10,4 +11,14 @@ services:
       - MYSQL_DATABASE=springboot
     ports:
       - "3306:3306"
+    restart: unless-stopped
+
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=user
+      - POSTGRES_DB=springboot
+    ports:
+      - "5432:5432"
     restart: unless-stopped

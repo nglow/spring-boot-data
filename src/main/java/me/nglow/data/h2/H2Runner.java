@@ -29,7 +29,9 @@ public class H2Runner implements ApplicationRunner {
             System.out.println(connection.getMetaData().getUserName());
 
             Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id));";
+            String sql = "DROP TABLE USER;";
+            statement.executeUpdate(sql);
+            sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id));";
             statement.executeUpdate(sql);
         }
 
