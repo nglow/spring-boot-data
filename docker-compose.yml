@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_DATABASE=springboot
+    ports:
+      - "3306:3306"
+    restart: unless-stopped

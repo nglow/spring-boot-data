@@ -1,4 +1,4 @@
-package me.nglow.data.h2;
+package me.nglow.data.mysql;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -11,12 +11,12 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 @Component
-@Profile("h2")
-public class H2Runner implements ApplicationRunner {
+@Profile("mysql")
+public class MySQLRunner implements ApplicationRunner {
     private final DataSource dataSource;
     private final JdbcTemplate jdbcTemplate;
 
-    public H2Runner(DataSource dataSource, JdbcTemplate jdbcTemplate) {
+    public MySQLRunner(DataSource dataSource, JdbcTemplate jdbcTemplate) {
         this.dataSource = dataSource;
         this.jdbcTemplate = jdbcTemplate;
     }
