@@ -1,5 +1,6 @@
 package me.nglow.data.data_jpa.account;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
+@Profile("jpa")
 public class Account {
 
     @Id @GeneratedValue
