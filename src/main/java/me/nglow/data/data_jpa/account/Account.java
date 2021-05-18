@@ -1,5 +1,8 @@
 package me.nglow.data.data_jpa.account;
 
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +19,16 @@ public class Account {
     private String password;
 
     private String email;
+
+    private boolean active;
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
     public String getEmail() {
         return email;
