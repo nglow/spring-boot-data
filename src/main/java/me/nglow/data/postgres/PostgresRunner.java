@@ -28,14 +28,14 @@ public class PostgresRunner implements ApplicationRunner {
             System.out.println(connection.getMetaData().getURL());
             System.out.println(connection.getMetaData().getUserName());
 
-            Statement statement = connection.createStatement();
-            String sql = "DROP TABLE ACCOUNT;";
-            statement.executeUpdate(sql);
-            sql = "CREATE TABLE ACCOUNT(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id));";
-            statement.executeUpdate(sql);
+//            Statement statement = connection.createStatement();
+//            String sql = "DROP TABLE ACCOUNT;";
+//            statement.executeUpdate(sql);
+//            sql = "CREATE TABLE ACCOUNT(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id));";
+//            statement.executeUpdate(sql);
         }
 
-        // 위 방법보다 JDBC 템플릿을 사용하는것을 추천 -> Connection관리등 여러가지를 처리해주는듯...
-        jdbcTemplate.execute("INSERT INTO ACCOUNT VALUES (1, 'taekhyeon')");
+//        // 위 방법보다 JDBC 템플릿을 사용하는것을 추천 -> Connection관리등 여러가지를 처리해주는듯...
+//        jdbcTemplate.execute("INSERT INTO ACCOUNT VALUES (1, 'taekhyeon')");
     }
 }

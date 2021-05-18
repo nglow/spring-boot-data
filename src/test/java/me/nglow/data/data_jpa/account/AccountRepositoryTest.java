@@ -43,7 +43,5 @@ public class AccountRepositoryTest {
 
         Optional<Account> nonExistingAccount = accountRepository.findByUsername("wrongName");
         assertThat(nonExistingAccount).isNotPresent();
-
     }
-
 }
