@@ -10,15 +10,15 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-@Component
 @Profile("redis")
+@Component
 public class RedisRunner implements ApplicationRunner {
 
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
     @Autowired
-    AccountRedisRepository accountRepository;
+    AccountRepository accountRepository;
 
 
     @Override

@@ -1,9 +1,12 @@
 package me.nglow.data.redis;
 
+import com.sun.org.glassfish.external.probe.provider.annotations.Probe;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.core.RedisHash;
 
 import javax.persistence.Id;
 
+@Profile("redis")
 @RedisHash("accounts")
 public class Account {
 

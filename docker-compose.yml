@@ -34,3 +34,10 @@ services:
     ports:
     - "27017:27017"
     restart: unless-stopped
+
+  neo4j:
+    image: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    restart: unless-stopped
