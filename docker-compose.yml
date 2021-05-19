@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+
+  mysql:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_DATABASE=springboot
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=user
+      - POSTGRES_DB=springboot
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
+    restart: unless-stopped
+
+  neo4j:
+    image: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    restart: unless-stopped
