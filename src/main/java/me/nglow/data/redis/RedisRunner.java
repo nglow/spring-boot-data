@@ -18,7 +18,7 @@ public class RedisRunner implements ApplicationRunner {
     StringRedisTemplate stringRedisTemplate;
 
     @Autowired
-    AccountRepository accountRepository;
+    AccountRedisRepository accountRepository;
 
 
     @Override
